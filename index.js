@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const config = require('./config.json')
+const embed = require('./embed.js')
 
 bot.on('ready', () => {
     console.log("Bot is online!");
@@ -28,6 +29,13 @@ bot.on('message', (msg) => {
         case 'test':
             msg.channel.send("EmbedPoster is working")
                 .then(message => message.delete({ timeout: 5000 })); // delete message after 5 seconds
+            break;
+
+        case 'post':
+            if (!args[1]) {
+                return msg.channel.send("post command requires a file as an argument")
+            }
+            embed.postEmbed(msg, args[1])
             break;
             
         default :
