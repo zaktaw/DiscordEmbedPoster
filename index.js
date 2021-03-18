@@ -34,11 +34,14 @@ bot.on('message', (msg) => {
         case 'post':
             if (!args[1]) {
                 return msg.channel.send("post command requires a file as an argument")
+                    .then(message => message.delete({ timeout: 5000 }))
+
             }
             embed.postEmbed(msg, args[1])
             break;
             
         default :
-            msg.channel.send(`"${args[0]}" is an invalid command.`);
+            msg.channel.send(`"${args[0]}" is an invalid command.`)
+                .then(message => message.delete({ timeout: 5000 }))
     }   
 });

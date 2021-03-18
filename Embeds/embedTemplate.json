@@ -1,7 +1,7 @@
 {
     "title": "Title",
     "description": "Description",
-    "color": "0xFF9400",
+    "color": "0x42a7f5",
     "fields": [
         {"header": "Field 1", "body": "Text for field 1"},
         {"header": "Field 2", "body": "Text for field 2"}

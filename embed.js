@@ -8,6 +8,7 @@ function makeEmbed(msg, embedJsonFilePath) {
     try {embedJson = fs.readFileSync(`./Embeds/${embedJsonFilePath}`)}
     catch (ENOENT) {
         msg.channel.send("Couldn't find file " + embedJsonFilePath)
+            .then(message => message.delete({ timeout: 5000 }))
         return false;
     }
 
