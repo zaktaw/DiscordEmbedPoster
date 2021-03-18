@@ -1,0 +1,28 @@
+{
+  "name": "embedposter",
+  "version": "1.0.0",
+  "description": "Discord bot for posting embeds to channels.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zaktaw/DiscordEmbedPoster.git"
+  },
+  "keywords": [
+    "Discord",
+    "Bot",
+    "Node.js",
+    "discord.js"
+  ],
+  "author": "Zakaria Karlsen Tawfiq",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zaktaw/DiscordEmbedPoster/issues"
+  },
+  "homepage": "https://github.com/zaktaw/DiscordEmbedPoster#readme",
+  "dependencies": {
+    "discord.js": "^12.5.1"
+  }
+}
